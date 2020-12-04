@@ -7,9 +7,15 @@ const app = Vue.createApp({
   },
   methods: {
     playerAttack() {
-      const attackPower = Math.floor(Math.random() * (12 - 7)) + 7;
+      const attackPower = Math.floor(Math.random() * (12 - 5)) + 5;
       this.monsterHealth -= attackPower;
       console.log(this.monsterHealth);
+      this.monsterAttack();
+    },
+    monsterAttack() {
+      const attackPower = Math.floor(Math.random() * (15 - 8)) + 8;
+      this.playerHealth -= attackPower;
+      console.log(this.playerHealth);
     },
   },
 });
