@@ -5,6 +5,14 @@ const app = Vue.createApp({
       monsterHealth: 100,
     };
   },
+  computed: {
+    playerHealthBarStyle() {
+      return { width: this.playerHealth + "%" };
+    },
+    monsterHealthBarStyle() {
+      return { width: this.monsterHealth + "%" };
+    },
+  },
   methods: {
     playerAttack() {
       const attackPower = Math.floor(Math.random() * (12 - 5)) + 5;
