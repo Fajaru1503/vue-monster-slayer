@@ -45,6 +45,9 @@ const app = Vue.createApp({
       const attackPower = getRandomValue(8, 15);
       this.playerHealth -= attackPower;
     },
+    surrender() {
+      this.playerHealth = 0;
+    },
   },
 });
 
