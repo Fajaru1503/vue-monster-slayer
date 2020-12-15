@@ -77,6 +77,7 @@ const app = Vue.createApp({
     },
     surrender() {
       this.playerHealth = 0;
+      this.addLogMessages("player", "surrender", healValue);
     },
     startGame() {
       this.playerHealth = 100;
